@@ -22,6 +22,8 @@ void pointersAsArrays() {
 
     std::cout << "Array access:   data[0] = " << data[0] << '\n';
 
+	std::cout << "Pointer access: ptr[0] = " << ptr[0] << '\n';
+
     // TODO: Print ptr[0] to show that a pointer can use [] just like an array
     // Expected output: "Pointer access: ptr[0] = 100"
     //
@@ -32,10 +34,12 @@ void pointersAsArrays() {
 
     // TODO: Print ptr[2] to access the third element through the pointer
     // Expected output: "Pointer access: ptr[2] = 300"
+	std::cout << "Pointer access: ptr[2] = " << ptr[2] << '\n';
 
     // TODO: Print ptr[4] to access the last element through the pointer
     // Expected output: "Pointer access: ptr[4] = 500"
-    //
+	std::cout << "Pointer access: ptr[4] = " << ptr[4] << '\n';
+
     // ! DISCUSSION: What happens if you do ptr[5] or ptr[100]?
     //   No compile error! C++ does NOT check array bounds. ptr[5] reads
     //   whatever happens to be in memory after the array — this is
@@ -54,6 +58,9 @@ void pointersAsArrays() {
     //   ptr[2] = 300
     //   ptr[3] = 400
     //   ptr[4] = 500
+    for (int i = 0; i < size; ++i) {
+        std::cout << "ptr[" << i << "] = " << ptr[i] << '\n';
+	}
     //
     // ! DISCUSSION: Is looping with ptr[i] the same as looping with data[i]?
     //   Yes, exactly. Since ptr points to data[0], ptr[i] and data[i]
